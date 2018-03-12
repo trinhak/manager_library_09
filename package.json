@@ -1,0 +1,7 @@
+{
+  "name": "manager_library_09",
+  "private": true,
+  "dependencies": {
+    "angular-i18n": "^1.6.9"
+  }
+}
