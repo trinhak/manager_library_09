@@ -45,6 +45,10 @@ en:
       author: "Author"
       tab_sigin: "Sign up"
       apptitle: "Manager Library"
+      account: "Account"
+      profile: "Profile"
+      settings: "Settings"
+      log_out: "Log out"
     footer:
       face: "Facebook"
       twitter: "Twitter"
@@ -83,3 +87,15 @@ en:
     erro:
       contains: "The form contains"
       error: "error"
+      copy: "2018 Library Member Sign Up Form."
+  sessions:
+    new:
+      copy: "2018 Library Member Login Form."
+      email: "Email"
+      password: "Password"
+      h1: "LIBRARY MEMBER LOGIN FORM"
+      login: "Login"
+      h2: "Sign In"
+      title: "Log in"
+    create:
+      danger: "Invalid email/password combination"
