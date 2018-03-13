@@ -46,12 +46,11 @@ en:
       tab_sigin: "Sign up"
       apptitle: "Manager Library"
     footer:
-      title_about: "Facebook"
-      title_contact: "Twitter"
+      face: "Facebook"
+      twitter: "Twitter"
   static_pages:
     home:
       home_welcome: "Wellcome To My Library"
-
   public:
     404:
       title: "The page you were looking for doesn't exist (404)"
@@ -67,3 +66,20 @@ en:
       title: "We're sorry, but something went wrong (500)"
       h1: "We're sorry, but something went wrong."
       p: "If you are the application owner check the logs for more information."
+  users:
+    new:
+      title: "Sign Up"
+      h1: "LIBRARY MEMBER SIGN UP FORM"
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      password_confirmation: "Password Confirmation"
+      submit: "Submit"
+    show:
+      hello: "Hello %{name} have nice day!!"
+    create:
+      success: "Welcome to the Library!"
+  shared:
+    erro:
+      contains: "The form contains"
+      error: "error"

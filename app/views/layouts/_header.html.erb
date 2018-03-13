@@ -1,6 +1,6 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header>
   <div class="container">
-    <%= link_to t ".title_logo", root_path, id: "logo" %>
+    <%= link_to t(".title_logo"), root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
@@ -20,7 +20,7 @@
       </ul>
     </li>
         <li><%= link_to t(".tab_home"), root_path %></li>
-          <li><%= link_to t(".tab_sigin"), root_path %></li>
+          <li><%= link_to t(".tab_sigin"), signup_path %></li>
           <li class="dropdown">
               <li><%= link_to t(".tab_login"), "#" %></li>
               <li class="divider"></li>
