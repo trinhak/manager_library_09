@@ -1,0 +1,18 @@
+<% provide :title, t(".title") %>
+<h1><%= t ".h1" %></h1>
+<div class="container w3layouts agileits">
+  <div class="register w3layouts agileits">
+    <h2><%= t ".title" %></h2>
+    <%= form_for @user do |f| %>
+      <%= render "shared/erro" %>
+      <%= f.text_field :name, placeholder: t(".name") %>
+      <%= f.text_field :email, placeholder: t(".email") %>
+      <%= f.password_field :password, placeholder: t(".password") %>
+      <%= f.password_field :password_confirmation, placeholder: t(".password_confirmation") %>
+      <div class="send-button w3layouts agileits">
+      <%= f.submit t ".submit" %>
+      </div>
+    <% end %>  
+  </div>
+  <div class="clear"></div>
+</div>
