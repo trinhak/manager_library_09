@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :comment, dependent: :destroy
   validates :email, length: {maximum: Settings.user.email_length},
     format: {with: VALID_EMAIL_REGEX}, presence: true, uniqueness: {case_sensitive: false}
-  validates :password, presence: true, length: {minimum: Settings.user.password_length}
+  validates :password, presence: true, length: {minimum: Settings.user.password_length}, allow_nil: true
   validates :name, presence: true, length: {maximum: Settings.user.name_length}
 
   has_secure_password
