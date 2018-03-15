@@ -1,0 +1,17 @@
+<% provide :title, t(".title") %>
+<h1><%= t ".h1" %></h1>
+<div class="container w3layouts agileits">
+  <div class="login w3layouts agileits">
+     <h2><%= t ".h2" %></h2>
+      <%= form_for :session do |f| %>
+      <%= f.text_field :email, placeholder: t(".email") %>
+      <%= f.password_field :password, placeholder: t(".password") %>
+      <div class="send-button w3layouts agileits">
+      <%= f.submit t ".login" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="footer w3layouts agileits">
+  <p> &copy;<%= t ".copy" %></p>
+</div>
