@@ -30,6 +30,16 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  authors:
+    new:
+      add_author: Add author
+      add_new_author: Add new author
+    show:
+      all_author: All authors
+    form:
+      name: name
+      birthday: birthday
+      details: details
   layouts:
     application:
       title: "ManagerLibrary09"
@@ -55,6 +65,40 @@ en:
   static_pages:
     home:
       home_welcome: "Wellcome To My Library"
+  pub:
+    create_error: Error
+    create_sub: Create
+    create_succ: Author created
+    delete_succ: Delete success
+    error: Error
+    find_error: Not Author
+    title: Author
+    update_sub: Update
+    update_succ: Update success
+    pub_name: Author Name
+    
+
+  author:
+    author_name: Author Name
+  shared:
+    error_messages:
+      error: error
+      form_contain_error: The form contains
+    error_messages_book:
+      error: error
+    form:
+      form_error: The form contains
+      not_found: Not Found
+  form:
+    update_succ: Profile updated
+    user: Users
+    user_error: User error
+    view_profile: view my profile
+    you_sure: You sure?
+  erro:
+    contains: "The form contains"
+    error: "error"
+
   public:
     404:
       title: "The page you were looking for doesn't exist (404)"
