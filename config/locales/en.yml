@@ -62,6 +62,8 @@ en:
     footer:
       face: "Facebook"
       twitter: "Twitter"
+      hello: "Have Nice Day!!"
+      copy: "2018 Library Member Form."
   static_pages:
     home:
       home_welcome: "Wellcome To My Library"
@@ -123,10 +125,24 @@ en:
       password: "Password"
       password_confirmation: "Password Confirmation"
       submit: "Submit"
+      log_in: "Please log in."
     show:
       hello: "Hello %{name} have nice day!!"
     create:
       success: "Welcome to the Library!"
+    form:
+      title: "Sign Up"
+      h1: "LIBRARY MEMBER SIGN UP FORM"
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      password_confirmation: "Password Confirmation"
+      copy: "2018 Library Member Login Form."
+    edit:
+      title: "Update Profile"
+      h1: "LIBRARY MEMBER UPDATE PROFILE FORM"
+      update: "Update"
+      success: "Profile updated success!!"
   shared:
     erro:
       contains: "The form contains"

@@ -1,0 +1,10 @@
+<%= form_for @user do |f| %>
+  <%= render "shared/erro" %>
+  <%= f.text_field :name, placeholder: t(".name") %>
+  <%= f.text_field :email, placeholder: t(".email") %>
+  <%= f.password_field :password, placeholder: t(".password") %>
+  <%= f.password_field :password_confirmation, placeholder: t(".password_confirmation") %>
+  <div class="send-button w3layouts agileits">
+    <%= f.submit yield(:button_text) %>
+  </div>
+<% end %>

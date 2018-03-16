@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
-  def show
-    @user = User.find_by id: params[:id]
-    @user || render(file: "public/404.html", status: 404, layout: true)
-  end
+  before_action :load_user, except: %i(new create)
+  before_action :logged_in_user, except: %i(new create)
+  before_action :correct_user, except: %i(new create show)
+  def show; end
 
   def new
     @user = User.new
@@ -19,9 +19,37 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def update
+    if @user.update_attributes user_params
+      flash[:success] = t ".edit.success"
+      redirect_to @user
+    else
+      render :edit
+    end
+  end
+
   private
 
   def user_params
     params.require(:user).permit :name, :email, :password, :password_confirmation
+  end
+
+  def load_user
+    @user = User.find_by id: params[:id]
+    @user || render(file: "public/404.html", status: 404, layout: true)
+  end
+
+  def logged_in_user
+    unless logged_in?
+      flash[:danger] = t ".new.log_in"
+      redirect_to login_url
+    end
+  end
+
+  def correct_user
+    load_user
+    redirect_to root_url unless current_user? @user
   end
 end
