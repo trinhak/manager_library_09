@@ -1,22 +1,29 @@
 <div class="container">
   <%= will_paginate %>
-  <h4><%= link_to t (".create_sub"), new_author_url %></h4>
-  <table class="table table-striped">
+  <table class="table">
     <thead>
       <tr>
-        <th><%= t "author.author_name" %></th>
+        <h2><%= t "authors.show.all_author" %></h2>
+        <th class="create-tr name"><%= t "author.author_name" %></th>
+        <th class="create-tr name"><%= t "author.author_detail" %></th>
       </tr>
     </thead>
     <tbody>
       <% @authors.each do |author| %>
         <tr>
           <td><%= link_to author.name, author %></td>
-          <td><%= link_to t("form.delete"), author, method: :delete, data: {confirm: t("form.you_sure")} %></td>
-          <td><%= link_to t("form.edit"), edit_author_path(author) %></td>
-          <td></td>
+          <td class="color-tr"><%=  author.details %></td>
+          <% if current_user.admin? %>
+            <td>
+              <%= link_to t("form.delete"), author, method: :delete, data: {confirm: t("form.you_sure")} %>
+            </td>
+            <td><%= link_to t("form.edit"), edit_author_path(author) %></td>
+            <td></td>
+          <% end %>
         </tr>
       <% end %>
     </tbody>
   </table>
+  <h4><%= link_to t(".create_sub"), new_author_url %></h4>
   <%= will_paginate %>
 </div>

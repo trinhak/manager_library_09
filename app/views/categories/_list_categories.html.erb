@@ -1,0 +1,12 @@
+<div class="center">
+  <table class="table">
+    <h3><%= t "categories.create.title" %></h3>
+    <tbody>
+      <% @category.each do |category| %>
+        <tr>
+          <td class="create-tr"><%= link_to category.name, category %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

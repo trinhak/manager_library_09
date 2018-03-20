@@ -1,3 +1,5 @@
 class StaticPagesController < ApplicationController
-  def home; end
+  def home
+    @category = Category.all
+  end
 end
