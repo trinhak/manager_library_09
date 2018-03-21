@@ -1,0 +1,27 @@
+<% provide :title, t(".title") %>
+<div class="container w3layouts agileits">
+  <table class="table">
+    <thead>
+      <h2><%= t ".title" %></h2>
+      <th class="create-tr name"><%= t ".name" %></th>
+    </thead>
+    <tbody>
+      <% @category.each do |category| %>
+        <tr>
+          <td class="create-tr"><%= link_to category.name, category %></td>
+          <% if current_user.admin? %>
+            <td><%= link_to t(".edit"), "#" %></td>
+            <td>
+              <%= link_to t(".delete"), category, method: :delete, data: {confirm: t(".confirm")} %>
+            </td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <% if current_user.admin? %>
+    <div>
+      <%= link_to t(".new_category"), new_category_path %>
+    </div>
+  <% end %>
+</div>

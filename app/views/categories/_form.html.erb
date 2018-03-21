@@ -1,0 +1,7 @@
+<%= form_for @category do |f| %>
+  <%= render "shared/erro_messager", object: f.object %>
+  <%= f.text_field :name, placeholder: t(".name") %>
+  <div class="send-button w3layouts agileits">
+    <%= f.submit yield(:button_text) %>
+  </div>
+<% end %>

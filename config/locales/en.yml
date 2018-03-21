@@ -34,8 +34,9 @@ en:
     new:
       add_author: Add author
       add_new_author: Add new author
+      title: List Author
     show:
-      all_author: All authors
+      all_author: List Authors
     form:
       name: name
       birthday: birthday
@@ -78,10 +79,9 @@ en:
     update_sub: Update
     update_succ: Update success
     pub_name: Author Name
-    
-
   author:
     author_name: Author Name
+    author_detail: Details
   shared:
     error_messages:
       error: error
@@ -100,7 +100,7 @@ en:
   erro:
     contains: "The form contains"
     error: "error"
-
+    title: "Categories"
   public:
     404:
       title: "The page you were looking for doesn't exist (404)"
@@ -144,7 +144,7 @@ en:
       update: "Update"
       success: "Profile updated success!!"
   shared:
-    erro:
+    erro_messager:
       contains: "The form contains"
       error: "error"
       copy: "2018 Library Member Sign Up Form."
@@ -159,3 +159,28 @@ en:
       title: "Log in"
     create:
       danger: "Invalid email/password combination"
+  categories:
+    new:
+      title: "New Categories"
+      submit: "Submit"
+      h1: "New Categories"
+    form:
+      name: "Name"
+    index:
+      title: "List Categories"
+      confirm: "You sure?"
+      delete: "delete"
+      edit: "edit"
+      name: "Name"
+      new_parent: "New Parent"
+    create:
+      success: "Add Success!!"
+      title: "Categories"
+  parents:
+    form:
+      name: "Name"
+    new:
+      h2: "Add Parent"
+      title: "Add Parent"
+      submit: "Save"
+
