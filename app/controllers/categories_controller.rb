@@ -1,10 +1,11 @@
 class CategoriesController < ApplicationController
   before_action :load_category, except: %i(new create index)
+  before_action :check_admin, except: %i(new create index)
 
   def show; end
 
   def index
-    @category = Category.all
+    @categories = Category.all
   end
 
   def new
@@ -21,6 +22,26 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def update
+    if @category.update_attributes category_params
+      flash[:success] = t ".edit.success"
+      redirect_to categories_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    if @category.destroy
+      flash[:success] = t "pub.delete_succ"
+    else
+      flash[:danger] = t "pub.error"
+    end
+    redirect_to categories_url
+  end
+
   private
 
   def category_params
@@ -28,7 +49,11 @@ class CategoriesController < ApplicationController
   end
 
   def load_category
-    @user = Category.find_by id: params[:id]
-    @user || render(file: "public/404.html", status: 404, layout: true)
+    @category = Category.find_by id: params[:id]
+    @category || render(file: "public/404.html", status: 404, layout: true)
+  end
+
+  def check_admin
+    redirect_to root_url unless current_user.admin?
   end
 end

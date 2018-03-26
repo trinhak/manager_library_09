@@ -6,17 +6,9 @@
       <th class="create-tr name"><%= t ".name" %></th>
     </thead>
     <tbody>
-      <% @category.each do |category| %>
-        <tr>
-          <td class="create-tr"><%= link_to category.name, category %></td>
-          <% if current_user.admin? %>
-            <td><%= link_to t(".edit"), "#" %></td>
-            <td>
-              <%= link_to t(".delete"), category, method: :delete, data: {confirm: t(".confirm")} %>
-            </td>
-          <% end %>
-        </tr>
-      <% end %>
+      <tr>
+        <%= render "categories" %>
+      </tr>
     </tbody>
   </table>
   <% if current_user.admin? %>

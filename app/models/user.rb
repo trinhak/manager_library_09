@@ -12,4 +12,8 @@ class User < ApplicationRecord
   validates :name, presence: true, length: {maximum: Settings.user.name_length}
 
   has_secure_password
+
+  scope :search_by_name, -> search do
+    where("name LIKE ?", "%#{search}%") if search.present?
+  end
 end

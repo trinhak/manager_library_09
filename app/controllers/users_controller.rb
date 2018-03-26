@@ -1,7 +1,14 @@
 class UsersController < ApplicationController
-  before_action :load_user, except: %i(new create)
+  before_action :load_user, except: %i(index new create)
   before_action :logged_in_user, except: %i(new create)
-  before_action :correct_user, except: %i(new create show)
+  before_action :correct_user, except: %i(new create show index)
+
+  def index
+    @users = User.search_by_name(params[:search])
+    @categories = Category.search_by_name(params[:search])
+    @authors = Author.order_name.search_by_name(params[:search]).paginate page: params[:page]
+  end
+
   def show; end
 
   def new
@@ -49,7 +56,6 @@ class UsersController < ApplicationController
   end
 
   def correct_user
-    load_user
     redirect_to root_url unless current_user? @user
   end
 end

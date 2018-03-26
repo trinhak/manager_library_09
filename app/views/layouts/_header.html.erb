@@ -31,5 +31,10 @@
         <% end %>
       </ul>
     </nav>
+    <div class="form-group">
+      <%= form_tag users_path, method: :get do %>
+        <%= text_field_tag :search, params[:search], placeholder: t(".search") %>
+      <% end %>
+    </div>
   </div>
 </header>

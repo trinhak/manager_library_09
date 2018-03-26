@@ -60,6 +60,7 @@ en:
       profile: "Profile"
       settings: "Settings"
       log_out: "Log out"
+      search: "Search"
     footer:
       face: "Facebook"
       twitter: "Twitter"
@@ -82,6 +83,7 @@ en:
   author:
     author_name: Author Name
     author_detail: Details
+    author_birthday: "Birthday"
   shared:
     error_messages:
       error: error
@@ -143,6 +145,12 @@ en:
       h1: "LIBRARY MEMBER UPDATE PROFILE FORM"
       update: "Update"
       success: "Profile updated success!!"
+    index:
+      find: "Had Found: %{size} user, %{sizes} categories, %{author_size} author"
+    users:
+      categories: "(categories)"
+      email: "(email: %{mail})"
+      author: "(author)"
   shared:
     erro_messager:
       contains: "The form contains"
@@ -173,9 +181,15 @@ en:
       edit: "edit"
       name: "Name"
       new_parent: "New Parent"
+    categories:
+      confirm: "You sure?"
     create:
       success: "Add Success!!"
       title: "Categories"
+    edit:
+      title: "Edit Categories"
+      update: "Update"
+      success: "Edit Success"
   parents:
     form:
       name: "Name"

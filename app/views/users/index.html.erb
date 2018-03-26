@@ -1,0 +1,11 @@
+<div class="container w3layouts agileits ">
+  <table class="table">
+    <thead>
+    <h3><%= t".find", size: @users.size, sizes: @categories.size, author_size: @authors.size %> </h3>
+      <th class="create-tr name"><%= t ".name" %></th>
+    </thead>
+    <tbody>
+      <%= render "users" %>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,15 @@
+<% @users.each do |user| %>
+  <tr>
+    <td class="create-tr"><%= link_to user.name, user %><%= t ".email", mail: user.email %></td>
+  </tr>
+<% end %>
+<% @categories.each do |category| %>
+  <tr>
+    <td class="create-tr"><%= link_to category.name, category %><%= t ".categories" %></td>
+  </tr>
+<% end %>
+<% @authors.each do |authors| %>
+  <tr>
+    <td class="create-tr"><%= link_to authors.name, authors %><%= t ".author" %></td>
+  </tr>
+<% end %>
