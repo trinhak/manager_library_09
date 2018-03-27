@@ -1,11 +1,34 @@
 <div class="container w3layouts agileits ">
   <table class="table">
     <thead>
-    <h3><%= t".find", size: @users.size, sizes: @categories.size, author_size: @authors.size %> </h3>
-      <th class="create-tr name"><%= t ".name" %></th>
+    <h3><%= t".find", size: @users.size, sizes: @categories.size, author_size: @authors.size, book_size: @books.size %>
+    </h3>
+    <th></th>
     </thead>
     <tbody>
-      <%= render "users" %>
+      <% @users.each do |user| %>
+        <tr>
+          <td class="create-tr"><%= link_to user.name, user %><%= t ".email", mail: user.email %></td>
+        </tr>
+      <% end %>
+
+      <% @categories.each do |category| %>
+        <tr>
+          <td class="create-tr"><%= link_to category.name, category %><%= t ".categories" %></td>
+        </tr>
+      <% end %>
+
+      <% @authors.each do |authors| %>
+        <tr>
+          <td class="create-tr"><%= link_to authors.name, authors %><%= t ".author" %></td>
+        </tr>
+      <% end %>
+
+      <% @books.each do |books| %>
+        <tr>
+          <td class="create-tr"><%= link_to books.name, books %><%= t(".book") %></td>
+        </tr>
+      <% end %>
     </tbody>
   </table>
 </div>

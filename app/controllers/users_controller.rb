@@ -4,9 +4,10 @@ class UsersController < ApplicationController
   before_action :correct_user, except: %i(new create show index)
 
   def index
-    @users = User.search_by_name(params[:search])
-    @categories = Category.search_by_name(params[:search])
-    @authors = Author.order_name.search_by_name(params[:search]).paginate page: params[:page]
+    @users = User.search_by_name params[:search]
+    @categories = Category.search_by_name params[:search]
+    @authors = Author.order_name.search_by_name params[:search]
+    @books = Book.search_by_name params[:search]
   end
 
   def show; end

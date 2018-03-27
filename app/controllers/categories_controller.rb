@@ -2,7 +2,9 @@ class CategoriesController < ApplicationController
   before_action :load_category, except: %i(new create index)
   before_action :check_admin, except: %i(new create index)
 
-  def show; end
+  def show
+    @books = @category.book.sort_by_alphabet.paginate page: params[:page]
+  end
 
   def index
     @categories = Category.all

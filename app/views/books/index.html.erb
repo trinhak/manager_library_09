@@ -1,0 +1,21 @@
+<% provide :title, t(".title") %>
+<div class="container">
+  <table class="table">
+    <% if current_user.admin?%>
+      <%= link_to t(".add"), new_book_path %>
+    <% end %>
+    <thead>
+      <h2><%= t ".title" %></h2>
+      <th class="create-tr"></th>
+      <th class="create-tr"><%= t(".name") %></th>
+      <th class="create-tr"><%= t(".description") %></th>
+      <th class="create-tr"><%= t(".category") %></th>
+      <th class="create-tr"><%= t(".author") %></th>
+    </thead>
+    <tbody>
+      <tr>
+        <%= render partial: "index",  collection: @books, as: "book" %>
+      </tr>
+    </tbody>
+  </table>
+</div>

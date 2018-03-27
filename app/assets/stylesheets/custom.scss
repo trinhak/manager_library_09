@@ -1,9 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-$pink: #FF99FF;
-$rgba-bground: rgba(10, 10, 10, 0.77);
-$rgba-border: rgba(238, 238, 238, 0.15);
-$blue: #045FB4;
+@import "color";
 
 /* header */
 #logo {
@@ -124,4 +121,10 @@ h3{
 }
 .color-tr{
   color: $blue;
+}
+
+.button {
+  margin-bottom: 10px;
+  color: $brown;
+  text-align: left;
 }

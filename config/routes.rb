@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resources :users
   resources :authors
   resources :categories
+  resources :books
 end
