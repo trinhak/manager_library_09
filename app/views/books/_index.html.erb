@@ -1,0 +1,14 @@
+<tbody>
+  <tr>
+    <td><%= image_tag book.picture.url if book.picture? %></td>
+    <td class="color-tr"><%= link_to book.name, book %></td>
+    <td class="color-tr"><%= book.description %></td>
+    <td class="color-tr"><%= book.category.name %></td>
+    <td class="color-tr"><%= book.author.name %></td>
+    <% if current_user.admin?%>
+      <td><%= link_to t(".edit"), "#" %></td>
+      <td><%= link_to t(".delete"), book, method: :delete, data: {confirm: t(".confirm")} %></td>
+      <td></td>
+    <% end %>
+  </tr>
+</tbody>

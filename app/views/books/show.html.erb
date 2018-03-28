@@ -1,0 +1,27 @@
+<% provide :title, t(".title") %>
+<div class="container">
+  <table class="table">
+    <thead>
+        <h2><%= t ".title" %></h2>
+        <th class="create-tr"><%= t(".name") %></th>
+        <th class="create-tr"><%= t(".publisher") %></th>
+        <th class="create-tr"><%= t(".description") %></th>
+        <th class="create-tr"><%= t(".category") %></th>
+        <th class="create-tr"><%= t(".author") %></th>
+        <th class="create-tr"><%= t(".quantity") %></th>
+        <th class="create-tr"></th>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="color-tr"><%= @book.name %></td>
+        <td class="color-tr"><%= @book.publisher %></td>
+        <td class="color-tr"><%= @book.description %></td>
+        <td class="color-tr"><%= @book.category.name %></td>
+        <td class="color-tr"><%= @book.author.name %></td>
+        <td class="color-tr"><%= @book.quantity %></td>
+        <td><%= gravatar_for_book @book %></td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>

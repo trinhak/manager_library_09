@@ -1,0 +1,26 @@
+<%= form_for @book do |f| %>
+  <%= render "shared/erro_messager", object: f.object %>
+  <div class="form-group">
+    <%= f.text_field :name, placeholder: t(".name"), class: "form-control" %>
+    <%= f.text_field :publisher, placeholder: t(".publisher"), class: "form-control" %>
+    <%= f.text_field :quantity, placeholder: t(".quantity"), class: "form-control" %>
+    <div class="button">
+      <%= f.label t ".description" %>
+    </div>
+    <%= f.text_area :description, placeholder: t(".description") %>
+    <div class="button">
+      <%= f.label t ".author" %>
+    </div>
+    <%= f.collection_select :author_id, @authors, :id, :name, class: "form-control" %>
+    <div class="button">
+      <%= f.label t ".category" %>
+    </div>
+    <%= f.collection_select :category_id, @categories, :id, :name, class: "form-control" %>
+    <div class="button">
+      <%= f.file_field :picture, accept: Settings.user.image %>
+    </div>
+  </div>
+  <div class="send-button w3layouts agileits">
+    <%= f.submit yield(:button_text) %>
+  </div>
+<% end %>

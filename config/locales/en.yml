@@ -30,6 +30,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  dates:
+    formats:
+      date_month_year: "%d-%m-%y"
   authors:
     new:
       add_author: Add author
@@ -61,6 +64,7 @@ en:
       settings: "Settings"
       log_out: "Log out"
       search: "Search"
+      book: "View Book"
     footer:
       face: "Facebook"
       twitter: "Twitter"
@@ -146,11 +150,11 @@ en:
       update: "Update"
       success: "Profile updated success!!"
     index:
-      find: "Had Found: %{size} user, %{sizes} categories, %{author_size} author"
-    users:
+      find: "Result: %{size} user, %{sizes} categories, %{author_size} author, %{book_size} book"
       categories: "(categories)"
       email: "(email: %{mail})"
       author: "(author)"
+      book: "(book)"
   shared:
     erro_messager:
       contains: "The form contains"
@@ -197,4 +201,33 @@ en:
       h2: "Add Parent"
       title: "Add Parent"
       submit: "Save"
-
+  books:
+    form:
+      name: "Name"
+      publisher: "Publisher"
+      quantity: "Quantity"
+      author: "Author"
+      category: "Categories"
+      description: "Description"
+    new:
+      title: "New Book"
+      submit: "Submit"
+      h1: "New Book"
+      picture: "should be less than 5MB"
+    create:
+      success: "Create Successfully"
+    book:
+      name_book: "Name Book"
+      author: "Author"
+      description: "Description"
+    show:
+      name: "Name"
+      publisher: "Publisher"
+      quantity: "Quantity"
+      description: "Description"
+      category: "Category"
+      author: "Author"
+      title: "Details Book"
+    index:
+      title: "List Books"
+      add: "Add Book"

@@ -20,3 +20,28 @@ User.create!(name: "Example User",
     password: password,
     password_confirmation: password)
 end
+
+
+2.times do |n|
+  Category.create!(name: Faker::Name.name)
+end
+
+2.times do |n|
+  Author.create!(
+    name: Faker::Name.name,
+    birthday: Faker::Date.between(10.days.ago, Date.today),
+    details: Faker::Name.name 
+  )
+end
+
+cate_rand = Category.all.pluck(:id)
+
+Author.all.each do |author|
+  author.books.create!(
+    name: Faker::Name.name,
+    category_id: cate_rand[rand(cate_rand.size)],
+    publisher: Faker::Name.name,
+    description: Faker::Lorem.sentence(2),
+    quantity: 20
+  )
+end
