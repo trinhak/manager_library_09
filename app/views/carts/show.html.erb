@@ -1,0 +1,20 @@
+<div class="container">
+  <table class="table">
+    <thead>
+    <h2><%= t ".title" %></h2>
+      <tr>
+        <th class="create-tr name"><%= t ".name" %></th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @cart.line_items.each do |a| %>
+      <tr>
+        <td class="color-tr"><%= a.book.name %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <%= button_to t(".delete"), @cart, :method => :delete, data: {:confirm => t(".confirm")} %>
+  <%= button_to t(".checkout"), new_borrow_book_path, :method => :get %>
+  <br>
+</div>

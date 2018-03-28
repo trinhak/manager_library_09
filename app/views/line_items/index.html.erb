@@ -1,0 +1,27 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <h1><%= t ".title" %></h1>
+      <tr>
+        <th class="create-tr name"><%= t ".book" %></th>
+        <th class="create-tr name"><%= t ".cart" %></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @line_items.each do |line_item| %>
+        <tr>
+          <td class="color-tr"><%= line_item.book.name %></td>
+          <td class="color-tr"><%= line_item.cart_id %></td>
+          <td><%= link_to t(".show"), line_item %></td>
+          <td><%= link_to t(".edit"), edit_line_item_path(line_item) %></td>
+          <td>
+            <%= link_to t(".destroy"), line_item, method: :delete, data: { confirm: t(".confirm") } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <%= link_to t(".new"), new_line_item_path %>
+</div>

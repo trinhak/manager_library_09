@@ -1,0 +1,17 @@
+<div class="container w3layouts agileits ">
+<table class="table">
+  <thead>
+    <tr>
+      <h1><%= t ".title" %></h1>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @carts.each do |cart| %>
+      <tr>
+        <td><%= link_to t(".show"), cart %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

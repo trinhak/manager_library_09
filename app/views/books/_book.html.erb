@@ -3,7 +3,7 @@
     <thead>
       <tr>
         <th class="create-tr name"><%= t(".name_book") %></th>
-        <th class="create-tr name"><%= t(".author") %></th>
+        <th class="create-tr name"><%= t(".category") %></th>
         <th class="create-tr name"><%= t(".description") %></th>
         <th class="create-tr name"></th>
       </tr>
@@ -11,7 +11,7 @@
     <tbody>
       <tr>
         <td><%= link_to book.name, book %></td>
-        <td class="color-tr"><%= book.author.name %></td>
+        <td class="color-tr"><%= book.category.name %></td>
         <td class="color-tr"><%= book.description %></td>
       </tr>
     </tbody>

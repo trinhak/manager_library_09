@@ -1,0 +1,17 @@
+<%= form_for @line_item do |form| %>
+  <%= render "shared/erro_messager", object: form.object %>
+
+  <div class="field">
+    <%= form.label :book_id %>
+    <%= form.number_field :book_id, id: :line_item_book_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cart_id %>
+    <%= form.number_field :cart_id, id: :line_item_cart_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

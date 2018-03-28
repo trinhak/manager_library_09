@@ -1,11 +1,11 @@
 class BooksController < ApplicationController
   
   def index
-    @books = Book.sort_by_alphabet.paginate page: params[:page]
+    @books = Book.sort_by_name.paginate page: params[:page]
     respond_to do |format|
       format.html
       format.xml
-      format.json {render json: @books.to_json}
+      format.json{render json: @books.to_json}
     end
   end
 

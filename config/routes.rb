@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :borrow_books
+  resources :line_items
+  resources :carts
   get "books/new"
 
   root "static_pages#home"

@@ -1,0 +1,33 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <h1><%= t ".title" %></h1>
+      <tr>
+        <th><%= t ".user" %></th>
+        <th><%= t ".borrow_start" %></th>
+        <th><%= t ".orrow_end" %></th>
+        <th><%= t ".quantity" %></th>
+        <th><%= t ".status" %></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @borrow_books.each do |borrow_book| %>
+        <tr>
+          <td><%= borrow_book.user.name %></td>
+          <td><%= borrow_book.borrow_start %></td>
+          <td><%= borrow_book.borrow_end %></td>
+          <td><%= borrow_book.quantity %></td>
+          <td><%= borrow_book.status %></td>
+          <td><%= link_to t(".show"), borrow_book %></td>
+          <td><%= link_to t(".edit"), edit_borrow_book_path(borrow_book) %></td>
+          <td>
+            <%= link_to t(".destroy"), borrow_book, method: :delete, data: { confirm: t(".confirm") } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <%= link_to t(".new"), new_borrow_book_path %>
+</div>

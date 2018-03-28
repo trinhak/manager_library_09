@@ -1,0 +1,6 @@
+<h1><%= t ".title" %></h1>
+
+<%= render "form", borrow_book: @borrow_book %>
+
+<%= link_to t(".show"), @borrow_book %> |
+<%= link_to t(".back"), borrow_books_path %>

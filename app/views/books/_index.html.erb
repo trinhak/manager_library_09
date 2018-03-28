@@ -5,6 +5,7 @@
     <td class="color-tr"><%= book.description %></td>
     <td class="color-tr"><%= book.category.name %></td>
     <td class="color-tr"><%= book.author.name %></td>
+    <td><%= button_to 'Add to Cart', line_items_path(book_id: book) %></td>
     <% if current_user.admin?%>
       <td><%= link_to t(".edit"), "#" %></td>
       <td><%= link_to t(".delete"), book, method: :delete, data: {confirm: t(".confirm")} %></td>

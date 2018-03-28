@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
   before_action :check_admin, except: %i(new create index)
 
   def show
-    @books = @category.book.sort_by_alphabet.paginate page: params[:page]
+    @books = @category.books.sort_by_alphabet.paginate page: params[:page]
   end
 
   def index

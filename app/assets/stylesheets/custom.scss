@@ -109,7 +109,7 @@ footer {
 }
 
 .create-tr{
-  color: white
+  color: white;
 }
 
 .name{
@@ -124,7 +124,16 @@ h3{
 }
 
 .button {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: $brown;
   text-align: left;
+}
+
+th{
+  color: white;
+  text-align: center;
+}
+
+tr{
+  color: white;
 }

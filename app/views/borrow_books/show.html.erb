@@ -1,0 +1,24 @@
+<% provide :title, t(".title") %>
+<div class="container">
+  <table class="table">
+    <thead>
+      <h2><%= t ".title" %></h2>
+      <th class="create-tr name"><%= t ".index.user" %></th>
+      <th class="create-tr name"><%= t ".index.borrow_start" %></th>
+      <th class="create-tr name"><%= t ".index.borrow_end" %></th>
+      <th class="create-tr name"><%= t ".index.quantity" %></th>
+      <th class="create-tr name"><%= t ".index..status" %></th>
+      <th colspan="3"></th>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="color-tr"><%= @borrow_book.user.name %></td>
+        <td class="color-tr"><%= @borrow_book.borrow_start %></td>
+        <td class="color-tr"><%= @borrow_book.borrow_end %></td>
+        <td class="color-tr"><%= @borrow_book.quantity %></td>
+        <td class="color-tr"><%= @borrow_book.status %></td>
+        <td class="color-tr"><%= link_to t(".edit"), edit_borrow_book_path(@borrow_book) %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

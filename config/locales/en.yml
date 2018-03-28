@@ -150,7 +150,7 @@ en:
       update: "Update"
       success: "Profile updated success!!"
     index:
-      find: "Result: %{size} user, %{sizes} categories, %{author_size} author, %{book_size} book"
+      find: "Results: %{size} user, %{sizes} categories, %{author_size} author, %{book_size} book"
       categories: "(categories)"
       email: "(email: %{mail})"
       author: "(author)"
@@ -209,6 +209,7 @@ en:
       author: "Author"
       category: "Categories"
       description: "Description"
+      massege: "This book has a LineItem"
     new:
       title: "New Book"
       submit: "Submit"
@@ -218,7 +219,7 @@ en:
       success: "Create Successfully"
     book:
       name_book: "Name Book"
-      author: "Author"
+      category: "Categories"
       description: "Description"
     show:
       name: "Name"
@@ -231,3 +232,77 @@ en:
     index:
       title: "List Books"
       add: "Add Book"
+  borrow_books:
+    new:
+      notice: "Your cart is empty"
+      root: "/"
+    create:
+      create_notice: "Borrow book was successfully created."
+    update:
+      update_notice: "Borrow book was successfully updated."
+    destroy:
+      destroy_notice: "Borrow book was successfully destroyed."
+    index:
+      title: "Borrow Books"
+      user: "User"
+      borrow_start: "Borrow start"
+      borrow_end: "Borrow end"
+      quantity: "Quantity"
+      status: "Status"
+      show: "Show"
+      edit: "Edit"
+      destroy: "Destroy"
+      confirm: "Are you sure?"
+      new: "New Borrow Book"
+    show:
+      title: "Borrow Details"
+    edit:
+      title: "Editing Borrow Book"
+      show: "Show"
+      back: "Back"
+  line_items:
+    create:
+      create_notice: "Line item was successfully created."
+    update:
+      update_notice: "Line item was successfully updated."
+    destroy:
+      destroy_notice: "Line item was successfully destroyed."
+    show:
+      book: "Book"
+      cart: "Cart"
+      back: "Back"
+      title: "infor cart"
+    index:
+      book: "Book"
+      cart: "Cart"
+      title: "Line Items"
+      show: "Show"
+      edit: "Edit"
+      destroy: "Destroy"
+      new: "New Line Item"
+      confirm: "Are you sure?"
+    edit:
+      title: "Editing Line Item"
+      show: "Show"
+      back: "Back"
+  carts:
+    show:
+      delete: "Empty cart"
+      checkout: "Borrow"
+      confirm: "Are you sure?"
+      title: "All line item of the cart"
+      name: "Name Book"
+    edit:
+      show: "Show"
+      back: "Back"
+      title: "Editing Cart"
+    index:
+      title: "Carts"
+      show: "Show"
+    create:
+      create_notice: "Cart was successfully created."
+    update:
+      update_notice: "Cart was successfully updated."
+    destroy:
+      destroy_notice: "Cart was successfully destroyed."
+      destroy_notice_fail: "Cart was not successfully destroyed"

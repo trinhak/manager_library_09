@@ -1,0 +1,19 @@
+<div class="container">
+  <table class="table">
+    <thead>
+    <h2><%= t ".title" %></h2>
+      <tr>
+        <th class="create-tr name"><%= t ".book" %></th>
+        <th class="create-tr name"><%= t ".cart" %></th>
+        <th class="create-tr name"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @line_item.book.name %></td>
+        <td><%= @line_item.cart_id %></td>
+        <td><%= link_to t(".back"), line_items_path %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
